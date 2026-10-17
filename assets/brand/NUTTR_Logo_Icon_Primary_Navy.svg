@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" role="img" aria-labelledby="title desc">
+  <title id="title">NUTTR Icon logo</title>
+  <desc id="desc">NUTTR icon logo, primary navy. Outlined vector artwork; no fonts or raster images.</desc>
+  <path fill="none" stroke="#0B2945" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="round" d="M 20.336 44.49 C 20.336 67 31 84 50 94 C 69 84 79.664 67 79.664 44.49"/>
+  <path fill="none" stroke="#0B2945" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" d="M 14 48 C 12 47 13 44 15 40 C 19 30 30 22 44 20 C 47 19 47 14 49 10 C 52 5 57 1 62 0 C 64 2 66 5 68 8 C 62 11 58 15 56 20 C 70 22 81 30 85 40 C 87 44 88 47 86 48 C 66 35 34 35 14 48 Z"/>
+</svg>

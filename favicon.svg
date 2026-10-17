@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- NUTTR favicon, small-size cut: the supplied acorn paths (NUTTR_Logo_Icon) at uniform scale with a heavier stroke so the mark reads at 16–32 px. White on the approved navy field. -->
+  <rect width="100" height="100" rx="22" fill="#0B2945"/>
+  <g transform="translate(6 8.6) scale(0.88)" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round">
+    <path stroke-linecap="butt" d="M 20.336 44.49 C 20.336 67 31 84 50 94 C 69 84 79.664 67 79.664 44.49"/>
+    <path stroke-linecap="round" d="M 14 48 C 12 47 13 44 15 40 C 19 30 30 22 44 20 C 47 19 47 14 49 10 C 52 5 57 1 62 0 C 64 2 66 5 68 8 C 62 11 58 15 56 20 C 70 22 81 30 85 40 C 87 44 88 47 86 48 C 66 35 34 35 14 48 Z"/>
+  </g>
+</svg>

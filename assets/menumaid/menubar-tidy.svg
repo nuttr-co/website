@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="t">
+  <title id="t">A Mac desktop with two close-ups of the menu bar: with every icon shown, and tidied up by Menu Maid to the time, Wi-Fi and battery.</title>
+  <!-- Drawn for the NUTTR homepage's Labs card (October 16, 2026). An illustration, not a screenshot. -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2D3E8C"/>
+      <stop offset="0.55" stop-color="#6A4BB8"/>
+      <stop offset="1" stop-color="#E0866E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0B1220" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#wall)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <!-- the Mac's own menu bar along the top -->
+  <rect width="1200" height="44" fill="#0B1220" fill-opacity="0.35"/>
+  <path d="M38 14c3-3 7-3 9 0-5 0-6 6-1 7-1 3-3 6-6 6-2 0-3-1-5-1s-3 1-5 1c-3 0-6-6-6-11 0-4 3-6 6-6 2 0 3 1 5 1zM42 9c0-2 2-4 4-4 0 2-2 4-4 4z" fill="#FFFFFF"/>
+  <g fill="#FFFFFF" fill-opacity="0.8"><rect x="72" y="16" width="62" height="12" rx="6"/><rect x="150" y="16" width="34" height="12" rx="6"/><rect x="200" y="16" width="40" height="12" rx="6"/><rect x="256" y="16" width="48" height="12" rx="6"/></g>
+  <text x="1160" y="29" fill="#FFFFFF" text-anchor="end" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600">9:41</text>
+
+  <!-- close-up 1: every icon shown -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="190" width="900" height="120" rx="30" fill="#1D1D1F" fill-opacity="0.88"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 250)">
+    <circle cx="300" cy="0" r="17"/>
+    <rect x="352" y="-17" width="34" height="34" rx="9"/>
+    <path d="M445 -18 465 16H425z"/>
+    <path d="M500 16V2M514 16V-17M528 16V-6"/>
+    <path d="M572 -15h30M572 0h30M572 15h30"/>
+  </g>
+  <text x="668" y="268" fill="#FFFFFF" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="600" text-anchor="middle">»</text>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" transform="translate(0 250)">
+    <path d="M722 -6a34 34 0 0 1 46 0M731 4a20 20 0 0 1 28 0"/>
+    <circle cx="745" cy="14" r="2.5" fill="#FFFFFF"/>
+    <rect x="800" y="-12" width="44" height="24" rx="7"/>
+    <path d="M850 -4v8"/>
+  </g>
+  <text x="960" y="266" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="600">9:41</text>
+
+  <!-- the click -->
+  <path d="M600 340 v62 M578 382 l22 22 22-22" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- close-up 2: tidied up -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="440" width="900" height="120" rx="30" fill="#1D1D1F" fill-opacity="0.88"/>
+  </g>
+  <text x="668" y="518" fill="#FFFFFF" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="600" text-anchor="middle">«</text>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" transform="translate(0 500)">
+    <path d="M722 -6a34 34 0 0 1 46 0M731 4a20 20 0 0 1 28 0"/>
+    <circle cx="745" cy="14" r="2.5" fill="#FFFFFF"/>
+    <rect x="800" y="-12" width="44" height="24" rx="7"/>
+    <path d="M850 -4v8"/>
+  </g>
+  <text x="960" y="516" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="600">9:41</text>
+</svg>
