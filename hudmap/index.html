@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HUD Map – Directions in plain sight</title>
+  <meta name="description" content="HUD Map sends each turn from the iPhone to the car’s built-in head-up display.">
+  <meta name="theme-color" content="#F8F7F4">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NUTTR">
+  <meta property="og:title" content="HUD Map">
+  <meta property="og:description" content="HUD Map sends each turn from the iPhone to the car’s built-in head-up display.">
+  <meta property="og:url" content="https://www.nuttr.co/hudmap/">
+  <meta property="og:image" content="https://www.nuttr.co/assets/share/hudmap-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HUD Map: Directions in plain sight. Personal project.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.nuttr.co/hudmap/">
+  <link rel="icon" href="../assets/hudmap/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="../assets/hudmap/apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/Manrope-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=2026-10-28">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('arrive-on');setTimeout(function(){if(!window.__arrive)document.documentElement.classList.remove('arrive-on')},3000)}</script>
+</head>
+<body class="stacks-page hudmap-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../"><img src="../assets/brand/NUTTR_Logo_Horizontal_Primary_Navy.svg" width="152" height="47" alt="NUTTR home"></a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../stacks/">Stacks</a></li>
+          <li><a href="../davevite/">Davevite</a></li>
+          <li><a href="../fittr/">FITTR</a></li>
+          <li class="nav-menu nav-menu--current">
+            <details>
+              <summary>Labs</summary>
+              <ul class="nav-menu-panel">
+                <li><a href="../hudmap/" aria-current="page"><img src="../assets/hudmap/hudmap-icon-160.webp" width="28" height="28" alt="">HUD Map</a></li>
+                <li><a href="../menumaid/"><img src="../assets/menumaid/menumaid-icon-160.webp" width="28" height="28" alt="">Menu Maid</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="s-hero" aria-labelledby="hud-title">
+      <div class="container s-hero-grid">
+        <div class="s-hero-copy">
+          <img class="app-icon s-hero-art" src="../assets/hudmap/hudmap-icon-320.webp" srcset="../assets/hudmap/hudmap-icon-160.webp 160w, ../assets/hudmap/hudmap-icon-320.webp 320w, ../assets/hudmap/hudmap-icon-480.webp 480w" sizes="(min-width: 1245px) 112px, (min-width: 978px) 9vw, 88px" width="1024" height="1024" alt="">
+          <p class="s-pill">Personal project</p>
+          <h1 id="hud-title">HUD Map</h1>
+          <p class="s-tagline">Directions in plain sight.</p>
+          <p class="s-lead">HUD Map sends each turn from the iPhone to the car’s built-in head-up display.</p>
+          <p class="s-meta"><span>iPhone</span> · <span>CarPlay</span> · <span>Apple Watch</span></p>
+        </div>
+        <figure class="hud-scene">
+          <img src="../assets/hudmap/drive-hud.svg" width="1200" height="760" fetchpriority="high" alt="A drawing from the driver’s seat at dusk: a left-turn arrow and 0.8 mi float on the windshield above the dashboard, and the car’s screen shows HUD Map in CarPlay with the same turn.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- How it works: how a turn reaches the head-up display, as a drawing, three steps and a row of numbers -->
+    <section class="s-section hud-how" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="s-head">
+          <h2 id="how-title">Under the hood.</h2>
+          <p>HUD Map is really a connector. Each turn leaves the iPhone as a one-line message, crosses the adapter’s Wi-Fi next to wireless CarPlay, and reaches the car as an iAP2 route guidance update, the kind an iPhone sends over a cable. Nothing in the car is modified.</p>
+        </div>
+        <figure class="hud-diagram">
+          <img src="../assets/hudmap/how-it-works.svg" width="1200" height="470" loading="lazy" decoding="async" alt="A drawing of how a turn travels: 1, HUD Map on the iPhone sends the next turn over CarPlay’s wireless connection; 2, the CarPlay adapter passes it through its cable into the car; 3, the car’s own head-up display shows the turn on the windshield.">
+        </figure>
+        <ol class="hud-legend" role="list">
+          <li>
+            <span class="hud-num" aria-hidden="true">1</span>
+            <div>
+              <p class="hud-kicker">HUD Map</p>
+              <h3>iPhone</h3>
+              <p>MapKit plans the routes. HUD Map’s guidance system tracks where you are on the route, picks the next turn and reroutes if you miss one. The guidance system sends the turn and its distance in meters to the adapter over TCP.</p>
+            </div>
+          </li>
+          <li>
+            <span class="hud-num" aria-hidden="true">2</span>
+            <div>
+              <p class="hud-kicker">A relay added to its software</p>
+              <h3>CarPlay adapter</h3>
+              <p>It still runs wireless CarPlay, standing in for a plugged-in iPhone. The relay starts when the adapter powers on, listens for HUD Map on its Wi-Fi and turns HUD Map’s lines into route guidance updates for the car.</p>
+            </div>
+          </li>
+          <li>
+            <span class="hud-num" aria-hidden="true">3</span>
+            <div>
+              <p class="hud-kicker">Its own head-up display</p>
+              <h3>The car</h3>
+              <p>The car converts the meters to miles and draws the turn on the windshield.</p>
+            </div>
+          </li>
+        </ol>
+        <dl class="hud-specs">
+          <div><dt>TCP</dt><dd>over the adapter’s Wi-Fi, next to wireless CarPlay</dd></div>
+          <div><dt>Up to 2</dt><dd>updates a second near a turn, and a heartbeat every 2 seconds</dd></div>
+          <div><dt>1,494</dt><dd>lines from real drives replayed against the relay on the bench</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="s-section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="s-head">
+          <h2 id="features-title">Heads up.</h2>
+          <p>HUD Map does its own turn-by-turn navigation on iPhone, CarPlay and Apple Watch.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="step-tour" data-step-tour>
+          <ol class="step-list"><li><button type="button" aria-expanded="false"><span class="step-n">1</span>Turns you can see coming</button><div class="step-more"><div><p>Directions say when a turn comes at a light or a stop sign.</p><div class="step-bar"><i></i></div></div></div></li><li><button type="button" aria-expanded="false"><span class="step-n">2</span>Apple Watch</button><div class="step-more"><div><p>The next turn on your wrist, with a tap before each turn.</p><div class="step-bar"><i></i></div></div></div></li><li><button type="button" aria-expanded="false"><span class="step-n">3</span>Pick a route</button><div class="step-more"><div><p>See how routes compare.</p><div class="step-bar"><i></i></div></div></div></li><li><button type="button" aria-expanded="false"><span class="step-n">4</span>At a glance</button><div class="step-more"><div><p>The next turn and the arrival time on the Lock Screen and in the Dynamic Island.</p><div class="step-bar"><i></i></div></div></div></li></ol>
+          <div class="step-stage"><div class="hm-shot"><img class="f-device" src="../assets/hudmap/phone-turn-by-turn-600.webp" srcset="../assets/hudmap/phone-turn-by-turn-400.webp 400w, ../assets/hudmap/phone-turn-by-turn-600.webp 600w, ../assets/hudmap/phone-turn-by-turn-900.webp 900w" sizes="(min-width: 761px) 290px, 70vw" width="1350" height="2760" loading="lazy" decoding="async" alt="HUD Map on iPhone during a drive: in 0.8 mi, at the traffic light, turn left onto Elmwood Ave, with the light marked on the map. Arrival is at 12:51 PM, 22 min and 10 mi away."><i class="hm-ping"></i><i class="hm-ping"></i></div><img class="hm-tap f-device f-watch" src="../assets/hudmap/watch-next-turn-450.webp" srcset="../assets/hudmap/watch-next-turn-300.webp 300w, ../assets/hudmap/watch-next-turn-450.webp 450w, ../assets/hudmap/watch-next-turn-600.webp 600w" sizes="(min-width: 761px) 210px, 50vw" width="600" height="960" loading="lazy" decoding="async" alt="HUD Map on Apple Watch Ultra: in 0.8 mi, at the traffic light, turn left onto Elmwood Ave, then US-21 S."><img class="f-device" src="../assets/hudmap/phone-route-choices-600.webp" srcset="../assets/hudmap/phone-route-choices-400.webp 400w, ../assets/hudmap/phone-route-choices-600.webp 600w, ../assets/hudmap/phone-route-choices-900.webp 900w" sizes="(min-width: 761px) 290px, 70vw" width="1350" height="2760" loading="lazy" decoding="async" alt="Three routes to Riverbanks Zoo &amp; Garden: 7 min via Taylor St, the fastest; 8 min via Gervais St, 1 min slower; and 7 min via I-126 W, about the same time. A Go button is below."><img class="f-device" src="../assets/hudmap/phone-lock-screen-600.webp" srcset="../assets/hudmap/phone-lock-screen-400.webp 400w, ../assets/hudmap/phone-lock-screen-600.webp 600w, ../assets/hudmap/phone-lock-screen-900.webp 900w" sizes="(min-width: 761px) 290px, 70vw" width="1350" height="2760" loading="lazy" decoding="async" alt="The iPhone Lock Screen at 12:30 on Friday, October 16, with HUD Map’s next turn in 0.2 mi onto Elmwood Ave, and Riverbanks Zoo at 12:50 PM, 21 min away."></div>
+        </div>
+      </div>
+      <!-- The rest of HUD Map as a bento grid. The drawings use the app's own words and the screenshots' drive to
+           Riverbanks Zoo; the glass tile shows the arrows the glass can show. -->
+      <div class="container pp-also">
+        <h3 class="f-ways-title" id="also-title">Also in HUD Map</h3>
+        <div class="bento">
+          <div class="bento-t bento-t--hero hm-glass"><div aria-hidden="true"><svg class="hm-turn" viewBox="8 6 40 56"><path d="M40 56V32a10 10 0 0 0-10-10H16"/><path d="M25 12 15 22l10 10"/></svg><ul class="hm-set"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5V5"/><path d="m6.5 10.5 5.5-5.5 5.5 5.5"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 20.5v-6.5L8.5 7.5"/><path d="M8 13.5v-6h6"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20.5V14a4.5 4.5 0 0 0-4.5-4.5H5.5"/><path d="M9.5 5.5 5.5 9.5l4 4"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 20.5v-6.5l6.5-6.5"/><path d="M16 13.5v-6h-6"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 20.5V14a4.5 4.5 0 0 1 4.5-4.5h6"/><path d="m14.5 5.5 4 4-4 4"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 20.5V10a4.5 4.5 0 0 0-9 0v6"/><path d="m4 12.5 3.5 3.5 3.5-3.5"/></svg></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4"/><path d="M6 4.5h11.5L15 8.5l2.5 4H6"/></svg></li></ul></div><div><h3>Turns on the glass</h3><p>The next turn shows on the head-up display.</p></div></div>
+          <div class="bento-t hm-follow"><p class="bento-num"><b data-count="0.8" data-from="1.4" data-decimals="1">0.8</b><span>mi</span></p><h3>Follows the drive</h3><p>Knows where you are on the route and how far away the next turn is.</p></div>
+          <div class="bento-t"><p class="hm-card" aria-hidden="true"><i class="hm-spin"></i>Rerouting</p><h3>Reroutes</h3><p>Spots a wrong turn and picks a new route that heads the way you’re going.</p></div>
+          <div class="bento-t bento-t--wide hm-traffic"><div class="hm-banner" aria-hidden="true"><b>Faster Route</b><span>Saves 4 min · Via I-126 W</span><div class="hm-buttons"><span>Ignore</span><span class="hm-blue">Accept</span></div></div><div><h3>Keeps up with traffic</h3><p>The time left follows the traffic, and HUD Map offers a faster route when one opens up.</p></div></div>
+          <div class="bento-t bento-t--wide hm-nearby"><div class="hm-chips" aria-hidden="true"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 20V5.5a1.5 1.5 0 0 1 1.5-1.5h5.5a1.5 1.5 0 0 1 1.5 1.5V20"/><path d="M4 20h11.5"/><path d="M5.5 10.5H14"/><path d="M14 9h1.5a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 0 3 0V8.5L17.5 6"/></svg>Gas</span><span class="hm-on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5v17"/><path d="M4.5 3.5v5a2.5 2.5 0 0 0 5 0v-5"/><path d="M17 20.5v-17c-2.2 1.2-3.3 3.7-3.3 7.5H17"/></svg>Food</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5h11v4.5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M5 21h11"/></svg>Coffee</span></div><div class="hm-row" aria-hidden="true"><i style="background:#FF9500"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5v17"/><path d="M4.5 3.5v5a2.5 2.5 0 0 0 5 0v-5"/><path d="M17 20.5v-17c-2.2 1.2-3.3 3.7-3.3 7.5H17"/></svg></i><div><b>Panera Bread</b><span>0.8 mi · 933 Gervais St, Columbia</span></div></div><div class="hm-row" aria-hidden="true"><i style="background:#FF9500"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5v17"/><path d="M4.5 3.5v5a2.5 2.5 0 0 0 5 0v-5"/><path d="M17 20.5v-17c-2.2 1.2-3.3 3.7-3.3 7.5H17"/></svg></i><div><b>PDQ</b><span>3.1 mi · 4456 Devine St, Columbia</span></div></div><h3>Find Nearby</h3><p>Gas, food, coffee, parking and EV chargers close by.</p></div>
+          <div class="bento-t bento-t--wide hm-places"><div class="hm-row" aria-hidden="true"><i style="background:#FF3B30"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14.5" rx="2.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></i><div><b>Zoo trip</b><span>1:00 PM · Riverbanks Zoo</span></div><em><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16v2.5M19 16v2.5"/><path d="M3.5 16.5h17v-4.5L18.5 7h-13l-2 5z"/><path d="M3.5 12h17"/></svg>22 min</em></div><div class="hm-row" aria-hidden="true"><i style="background:#0A84FF"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="5" width="13" height="16" rx="2"/><path d="M9.5 3.5h5v3h-5z"/></svg></i><div><b>Copied Address</b></div><em class="hm-dir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16v2.5M19 16v2.5"/><path d="M3.5 16.5h17v-4.5L18.5 7h-13l-2 5z"/><path d="M3.5 12h17"/></svg>Directions</em></div><h3>Skip the typing</h3><p>Search finds your contacts’ addresses, upcoming events with a place show up before they start, and an address you copy is ready to open.</p></div>
+          <div class="bento-t bento-t--wide hm-carplay"><div class="hm-dash" aria-hidden="true"><div><i style="background:#30B0C7"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6.5 10v10h11V10"/></svg></i>Home</div><div><i style="background:#A2845E"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12" rx="2"/><path d="M9 8V5.5h6V8"/><path d="M3.5 13h17"/></svg></i>Work</div></div><div><h3>CarPlay</h3><p>The full app runs on the car’s screen and on the CarPlay Dashboard, with Home and Work one tap away.</p></div></div>
+          <div class="bento-t bento-t--wide hm-passenger"><div class="hm-pass" aria-hidden="true"><b>Riverbanks Zoo</b><span>12:51 PM arrival · 22 min · 10 mi</span><div><span>Add Stop</span><span>Routes</span><span>Share ETA</span></div></div><div><h3>A screen for the passenger</h3><p>A second screen on the iPhone for adding a stop or switching routes while CarPlay keeps guiding.</p></div></div>
+          <div class="bento-t bento-t--wide hm-arrival"><div class="hm-watch hm-trip" aria-hidden="true"><span>Riverbanks Zoo</span><strong>12:50 PM</strong><em>21 min · 10 mi</em></div><div><h3>The arrival</h3><p>When you’ll get there and how far is left. Double tap to end.</p></div></div>
+          <div class="bento-t bento-t--wide hm-3d"><svg viewBox="0 0 240 150" aria-hidden="true"><rect width="240" height="150" fill="#EEF1EA"/><polygon points="92,150 148,150 126,30 114,30" fill="#FFFFFF"/><polygon points="115,150 125,150 120.8,30 119.2,30" fill="#0A84FF" fill-opacity="0.85"/><polygon points="20,140 70,140 70,110 20,110" fill="#D3D9E0"/><polygon points="70,140 82,132.8 82,102.8 70,110" fill="#BCC5CF"/><polygon points="20,110 70,110 82,102.8 32,102.8" fill="#E6EAEF"/><polygon points="48,94 84,94 84,70 48,70" fill="#D3D9E0"/><polygon points="84,94 93,88.6 93,64.6 84,70" fill="#BCC5CF"/><polygon points="48,70 84,70 93,64.6 57,64.6" fill="#E6EAEF"/><polygon points="72,56 96,56 96,40 72,40" fill="#D3D9E0"/><polygon points="96,56 103,51.8 103,35.8 96,40" fill="#BCC5CF"/><polygon points="72,40 96,40 103,35.8 79,35.8" fill="#E6EAEF"/><polygon points="160,140 214,140 214,100 160,100" fill="#D3D9E0"/><polygon points="160,140 148,132.8 148,92.8 160,100" fill="#BCC5CF"/><polygon points="160,100 214,100 202,92.8 148,92.8" fill="#E6EAEF"/><polygon points="146,86 182,86 182,64 146,64" fill="#D3D9E0"/><polygon points="146,86 137,80.6 137,58.6 146,64" fill="#BCC5CF"/><polygon points="146,64 182,64 173,58.6 137,58.6" fill="#E6EAEF"/><polygon points="138,52 164,52 164,32 138,32" fill="#D3D9E0"/><polygon points="138,52 131,47.8 131,27.8 138,32" fill="#BCC5CF"/><polygon points="138,32 164,32 157,27.8 131,27.8" fill="#E6EAEF"/><polygon class="hm-car" points="120,100 133,128 120,121 107,128" fill="#0A84FF" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/><circle cx="214" cy="26" r="15" fill="#FFFFFF"/><text x="214" y="30.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#1D1D1F">2D</text></svg><div><h3>3D map</h3><p>Buildings and hills in 3D, and an arrow that glides along the road between updates.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="s-head">
+          <h2 id="why-title">A personal project.</h2>
+        </div>
+        <div class="s-features">
+          <div class="s-feature">
+            <span class="s-icon s-icon--sky" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2.2h5c.1-1 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg></span>
+            <h3>Why it was built</h3>
+            <p>CarPlay handles almost everything in the car, but the head-up display only shows directions from the car’s own navigation. That system’s 3G connection is no longer supported, and getting an address from a phone into it is tedious.</p>
+            <p>Apple Maps doesn’t send its turns to the head-up display, and it doesn’t share them with other apps. So HUD Map is a connector that gets each turn from the iPhone, through the adapter, to the car. That meant building the navigation too.</p>
+          </div>
+          <div class="s-feature">
+            <span class="s-icon s-icon--amber" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17h14l-1.6-5.2a2 2 0 0 0-1.9-1.4H8.5a2 2 0 0 0-1.9 1.4z"/><circle cx="8" cy="17.5" r="1.6"/><circle cx="16" cy="17.5" r="1.6"/></svg></span>
+            <h3>Why it won’t be released</h3>
+            <p>Releasing it would mean modifying a CarPlay adapter for every car it runs in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-section s-section--gray s-cta" id="details" aria-labelledby="details-title">
+      <div class="container">
+        <p class="s-pill">Personal project</p>
+        <h2 id="details-title">HUD Map</h2>
+        <dl class="s-facts s-cta-facts">
+          <div><dt>Status</dt><dd>Personal project</dd></div>
+          <div><dt>Works with</dt><dd>iPhone with iOS 27</dd></div>
+          <div><dt>CarPlay</dt><dd>Approved by Apple</dd></div>
+          <div><dt>Apple Watch</dt><dd>Yes</dd></div>
+          <div><dt>Developer</dt><dd>NUTTR</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="footer-brand" href="../"><img src="../assets/brand/NUTTR_Logo_Horizontal_Reversed_OnNavy.svg" width="140" height="43" alt="NUTTR home"></a>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <li><a href="../stacks/">Stacks</a></li>
+            <li><a href="../davevite/">Davevite</a></li>
+            <li><a href="../fittr/">FITTR</a></li>
+            <li><a href="../#projects">Labs</a></li>
+            <li><a href="../support">Support</a></li>
+            <li><a href="../privacy">Privacy</a></li>
+            <li><a href="../terms">Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NUTTR LLC</p>
+        <p>South Carolina, United States</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Personal Projects menu: close it on a click elsewhere or Escape.
+    document.addEventListener('click', e => document.querySelectorAll('.nav-menu details[open]').forEach(d => { if (!d.contains(e.target)) d.open = false; }));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.nav-menu details[open]').forEach(d => { d.open = false; }); });
+  </script>
+  <script src="../assets/js/modules.js?v=2026-10-29" defer></script>
+</body>
+</html>
