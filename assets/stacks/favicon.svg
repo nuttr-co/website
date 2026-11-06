@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1280 1280" fill="none">
+  <title>Stacks v4</title>
+  <desc>Editable vector reconstruction of the Stacks photo-card icon. Transparent canvas, solid colors, no embedded raster images.</desc>
+  <defs>
+    <clipPath id="photo-clip">
+      <path d="M524 376H1006C1065 376 1106 417 1106 476V949C1106 1014 1071 1049 1006 1049H524C459 1049 423 1014 423 949V476C423 417 465 376 524 376Z" />
+    </clipPath>
+  </defs>
+  <g id="back-card">
+    <path fill="#FD6267" d="M199 317L700 147C762 125 820 155 841 218L1029 771C1050 834 1021 893 959 914L451 1011C389 1032 327 1011 306 949L129 476C108 413 136 339 199 317Z" />
+  </g>
+  <g id="middle-card">
+    <path fill="#9795FA" d="M349 336L872 223C938 207 997 249 1006 315L1100 832C1115 900 1081 952 1016 967L494 1063C430 1077 373 1035 358 970L254 477C238 408 277 352 349 336Z" />
+  </g>
+  <g id="front-frame">
+    <path fill="#C2E3FC" d="M526 333H999C1093 333 1147 387 1147 479V947C1147 1043 1093 1094 999 1094H526C433 1094 380 1042 380 947V479C380 387 433 333 526 333Z M524 376H1006C1065 376 1106 417 1106 476V949C1106 1014 1071 1049 1006 1049H524C459 1049 423 1014 423 949V476C423 417 465 376 524 376Z" fill-rule="evenodd" />
+  </g>
+  <g id="photo" clip-path="url(#photo-clip)">
+    <path fill="#FCFCFC" d="M423 376H1106V1049H423Z" />
+    <circle id="sun" cx="768.5" cy="600" r="114.5" fill="#FCBB32" />
+    <path id="far-hill" fill="#6ECA9A" d="M663 879C746 803 847 738 932 725C1003 713 1085 733 1106 803V1049H663Z" />
+    <path id="near-hill" fill="#058880" d="M423 828C436 774 514 746 590 749C756 748 944 877 1070 1049H423Z" />
+  </g>
+</svg>
